@@ -17,9 +17,6 @@ if [ "$ENABLE_REDUCE" = true ] ; then
   
 else
   make -C "${KERNEL_DIR}" ARCH="${KERNEL_ARCH}" CROSS_COMPILE="${CROSS_COMPILE}" INSTALL_MOD_PATH=../../.. modules_install
-
-  # Install kernel firmware
-  make -C "${KERNEL_DIR}" ARCH="${KERNEL_ARCH}" CROSS_COMPILE="${CROSS_COMPILE}" INSTALL_FW_PATH=../../../lib firmware_install
 fi
 
 
